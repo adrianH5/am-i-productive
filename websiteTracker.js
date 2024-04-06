@@ -66,7 +66,5 @@ function updateWebsiteTime() {
     });
 }
 
-// Call the function once to initialize the content
 updateWebsiteTime();
-// Set up an interval to update the content every second
 setInterval(updateWebsiteTime, 1000);

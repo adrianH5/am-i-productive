@@ -38,7 +38,7 @@ window.onload = function () {
     let secondsInput = document.querySelector('#seconds'); // Get the seconds input field
 
     startButton.onclick = function() {
-        let hours = parseInt(hoursInput.value) || 0; // Get the hours from the input field
+        let hours = parseInt(hoursInput.value) || 0;
         let minutes = parseInt(minutesInput.value) || 0; // Get the minutes from the input field
         let seconds = parseInt(secondsInput.value) || 0; // Get the seconds from the input field
         let totalTimeInSeconds = hours * 3600 + minutes * 60 + seconds; // Convert the time to seconds
