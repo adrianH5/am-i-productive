@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<h1>Website Time Tracker</h1>
+<h1>Am I Productive?</h1>
 <div id="tabs">
     <button class="tablink" id="websiteTimeButton">Website Time</button>
     <button class="tablink" id="studyTimerButton">Study Timer</button>
@@ -14,9 +14,9 @@
     <!-- Existing content goes here -->
 </div>
 <div id="studyTimer" class="tabcontent">
-    <input type="number" id="hours" min="0" max="23" placeholder="Hours" class="big-input">
-    <input type="number" id="minutes" min="0" max="59" placeholder="Minutes" class="big-input">
-    <input type="number" id="seconds" min="0" max="59" placeholder="Seconds" class="big-input">
+    <label for="hours"></label><input type="number" id="hours" min="0" max="23" placeholder="Hours" class="big-input">
+    <label for="minutes"></label><input type="number" id="minutes" min="0" max="59" placeholder="Minutes" class="big-input">
+    <label for="seconds"></label><input type="number" id="seconds" min="0" max="59" placeholder="Seconds" class="big-input">
     <p id="timer"></p>
     <button id="startButton">Start</button>
     <button id="resetButton">Reset</button>
