@@ -1,0 +1,160 @@
+body {
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+#websiteTime {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+#websiteTime p {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    color: #444;
+}
+#websiteTime p:last-child {
+    border-bottom: none;
+}
+.domain {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+@keyframes fadeIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 0.5s;
+    will-change: transform, opacity;
+}
+.tracker {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    color: #444;
+}
+.delete-button {
+    position: absolute;
+    top: -25%; /* Position at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+    /* ... other styles ... */
+}
+
+.delete-button:hover {
+    background-color: #e4e4e4; /* Button background color on hover */
+}
+.add-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.checkbox-container {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.track-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.track-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.tablink {
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 50px 20px;
+    height: 100%;
+}
+
+#startButton:hover, #resetButton:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #4CAF50;
+}
+
+.add-button, .track-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#studyTimer button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+#studyTimer button:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+.big-input {
+    width: 100px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    font-size: 16px; /* Adjust as needed */
+}
