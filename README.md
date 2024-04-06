@@ -23,3 +23,10 @@ git clone https://github.com/adrianH5/your-repo-name.git
 
 This project uses the Chrome Storage API to store tasks and time entries. You can find more information about the Chrome Storage API [here](https://developer.chrome.com/docs/extensions/reference/storage/).
 
+## Future Plans
+
+- Website Blocking: Implement a feature that allows users to block certain websites during their study time to avoid distractions.  
+- Task Integration: Integrate with popular task management tools like Trello or Asana. This would allow users to import tasks and track time against them directly within the extension.  
+- Detailed Reports: Enhance the reporting feature to include more detailed statistics, such as time spent per task, per day, or per website.  
+- Notifications: Add a feature to send notifications to users when they have spent a certain amount of time on a website or when their study time is over.  
+- Sync Across Devices: Allow the extension to sync data across multiple devices so users can track their productivity no matter where they are working from.
