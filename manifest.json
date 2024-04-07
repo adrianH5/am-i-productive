@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Am I Productive?",
+  "description": "A simple extension to track your productivity",
   "version": "1.0",
   "background": {
     "service_worker": "background.js"

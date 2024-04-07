@@ -32,7 +32,7 @@ function createParagraph(domain, timeString, trackedWebsites) {
     p.appendChild(checkbox);
     let deleteButton = document.createElement('button');
     deleteButton.className = 'delete-button';
-    deleteButton.textContent = 'X';
+    //deleteButton.textContent = 'X';
     deleteButton.addEventListener('click', function() {
         chrome.runtime.sendMessage({type: "deleteWebsite", domain: domain});
         p.remove();

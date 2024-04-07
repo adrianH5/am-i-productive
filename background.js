@@ -85,3 +85,21 @@ setInterval(() => {
     });
 }, 1000);
 
+function updateWebsiteTime() {
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+        let domain = new URL(tabs[0].url).hostname;
+
+        // Get the tracked websites from storage
+        chrome.storage.local.get(['trackedWebsites'], function(result) {
+            let trackedWebsites = result.trackedWebsites ? result.trackedWebsites : {};
+
+            // If the current website is being tracked, increment its time
+            if (trackedWebsites[domain]) {
+                trackedWebsites[domain]++;
+            }
+
+            // Save the updated trackedWebsites object back to storage
+            chrome.storage.local.set({trackedWebsites: trackedWebsites});
+        });
+    });
+}

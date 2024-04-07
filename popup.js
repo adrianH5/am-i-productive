@@ -73,6 +73,9 @@ function openTab(tabId, elmnt) {
     // Get the add button and track button
     let addButton = document.querySelector('.add-button');
     let trackButton = document.querySelector('.track-button');
+    // Get downloadcsv button
+    let downloadCSVButton = document.getElementById('downloadCSV');
+
 
     // If the tabId is 'studyTimer', hide the buttons, otherwise show them
     if (tabId === 'studyTimer') {
@@ -90,9 +93,13 @@ function openTab(tabId, elmnt) {
 
         if (addButton) addButton.style.display = 'none';
         if (trackButton) trackButton.style.display = 'none';
+        if (downloadCSVButton) downloadCSVButton.style.display = 'none';
+
     } else {
         if (addButton) addButton.style.display = 'block';
         if (trackButton) trackButton.style.display = 'block';
+        if (downloadCSVButton) downloadCSVButton.style.display = 'inline-block';
+
     }
 }
 
@@ -113,3 +120,19 @@ for (let i = 0; i < tabcontent.length; i++) {
 // Show the specific tab content you want to display first
 document.getElementById('websiteTime').style.display = "block";
 
+document.getElementById('downloadCSV').addEventListener('click', function() {
+    // Get the websiteTime data from storage
+    chrome.storage.local.get(['websiteTime'], function(result) {
+        let websiteTime = result.websiteTime ? result.websiteTime : {};
+
+        // Format the data for the CSV file
+        let data = [['Website', 'Time Spent']];
+        for (let domain in websiteTime) {
+            let timeSpent = formatStudyTimer(websiteTime[domain]);
+            data.push([domain, timeSpent]);
+        }
+
+        // Call the downloadCSV function
+        downloadCSV(data, 'website_time.csv');
+    });
+});
